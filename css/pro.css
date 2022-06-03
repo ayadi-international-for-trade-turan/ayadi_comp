@@ -1,0 +1,88 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .imgs-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+
+}
+.container .imgs-container .box {
+    position: relative;
+    overflow: hidden;
+}
+.container .imgs-container .box img {
+    max-width: 100%;
+    transition: 0.4s;
+}
+.container .imgs-container .box:hover img {
+    transform: rotate(90deg);
+
+}
+@media (max-width: 767px) {
+    .container .imgs-container .box {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+    span {
+        width: 100%;
+        height: 5px;
+        background-image: linear-gradient(to right,
+        #7a1a1f 50%,
+        #1f65a7   50% ,#1f65a7 100%
+        );
+    }
+}
+
+@media (min-width: 768px) {
+    .container .imgs-container .box {
+        flex-basis: 32%;
+    }
+}
+.container .imgs-container .box .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: rgb(145 182 211 / 28%);
+    width: 100%;
+    transition: 0.4s;
+    bottom: -100%;
+}
+
+.container .imgs-container .box:hover .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: #80808080;;
+    width: 100%;
+    transition: 0.4s;
+    bottom: 0;
+}
+.container .imgs-container .box .caption h4 {
+    font-size: 24px;
+    color: #84171a;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+}
+.container .imgs-container .box .caption h3 {
+    text-align: center;
+    color: floralwhite;
+    font-size: 28px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    padding-bottom: 10px;
+}
+.container .imgs-container .box .caption p {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+}
